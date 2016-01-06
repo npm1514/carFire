@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="carFire">
+  <head>
+    <title></title>
+  </head>
+  <body ng-controller="mainCtrl">
+    <div class="nav">
+      <a ui-sref="home">home</a>
+      <a ui-sref="cars">cars</a>
+      <a ui-sref="car">car</a>
+    </div>
+
+    <div ui-view>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="home/homeCtrl.js"></script>
+    <script src="cars/carsCtrl.js"></script>
+    <script src="car/carCtrl.js"></script>
+  </body>
+</html>

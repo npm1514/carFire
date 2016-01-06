@@ -1,0 +1,11 @@
+Hi
+<div ng-repeat="car in cars">
+  <ul>
+    <li><a ui-sref="car" ng-model="car-model">{{car.year}} {{car.make}} {{car.model}}</a></li>
+    <li>Year: {{car.year}}</li>
+    <li>Make: {{car.make}}</li>
+    <li>Model: {{car.model}}</li>
+    <li>Mileage: {{car.mileage}}</li>
+    <li>Price: {{car.price}}</li>
+  </ul>
+</div>
