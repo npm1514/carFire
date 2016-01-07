@@ -1,11 +1,22 @@
-Hi
-<div ng-repeat="car in cars">
+<header>
+  CARS PAGE!
+</header>
+
+<div>
+
+  <form action="index.html" method="post">
+    <input type="text" ng-model="car.year" placeholder="Year">
+    <input type="text" ng-model="car.make" placeholder="Make">
+    <input type="text" ng-model="car.model" placeholder="Model">
+    <input type="text" ng-model="car.color" placeholder="Color">
+    <input type="text" ng-model="car.price" placeholder="Price">
+    <button type="button" name="button"ng-click="addCar(car)">Add Car</button>
+  </form>
+
   <ul>
-    <li><a ui-sref="car" ng-model="car-model">{{car.year}} {{car.make}} {{car.model}}</a></li>
-    <li>Year: {{car.year}}</li>
-    <li>Make: {{car.make}}</li>
-    <li>Model: {{car.model}}</li>
-    <li>Mileage: {{car.mileage}}</li>
-    <li>Price: {{car.price}}</li>
+    <li ng-repeat="car in cars">
+      {{car.year}} {{car.make}} {{car.model}} - Price: {{car.price}} <button type="button" name="button" ui-sref="car" ng-click="getCar(car)">See More</button>
+    </li>
   </ul>
+
 </div>

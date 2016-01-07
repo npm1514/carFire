@@ -1,0 +1,28 @@
+<header>
+  CAR PAGE!
+</header>
+
+<div>
+
+  <ul>
+    <li>
+      {{car.year}} {{car.make}} {{car.model}}<br>
+      - Price: {{car.price}}<br>
+      - Mileage: {{car.mileage}}
+    </li>
+  </ul>
+
+  <form action="index.html" method="post">
+    <input type="text" ng-model="car.review" placeholder="Leave comments here">
+    <button type="button" name="button"ng-click="addCar(car.review)">Add Review</button>
+  </form>
+
+  <ul>
+    COMMENTS:
+    <li ng-repeat="car in cars">
+      {{car.review}}
+    </li>
+  </ul>
+
+
+</div>
